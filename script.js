@@ -345,3 +345,40 @@ greetPerson("Aadil") */
 //     }
 // }
 // let c = new Child("Aadil");
+
+// Sets (Doesn't contain duplicate values)
+// let myset = new Set();
+// myset.add("Hello");
+// myset.add(1);
+// myset.add(1);
+
+// console.log(myset);
+// console.log(myset.size);
+
+// let obj1 = {}
+// let obj2 = {}
+
+// myset.add (obj1);
+// myset.add(obj2);
+
+// console.log(myset);
+// console.log(myset.size);
+
+// let newset = new Set([1,2,3,4,5,5,5,5,5,5]);
+// console.log(newset)
+// console.log(newset.size)
+
+// console.log(myset.has(1));
+// let deleted = myset.delete(1)
+// console.log(deleted);
+// console.log(myset.has(1));
+
+//WEAKSET (FOR STORING OBJECT REFERENCES)
+let sett = new WeakSet();
+let key = {}
+sett.add(key);
+console.log(sett.has(key));
+key = null;
+console.log(sett.has(key));
+
+
