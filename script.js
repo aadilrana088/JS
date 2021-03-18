@@ -194,3 +194,154 @@ greetPerson("Aadil") */
 // let colorsArray = ['yellow','white','green']
 // display(message,...colorsArray);
 // // NOTE: spread operator is specified in function call and rest operator is specified in arguments of function
+
+//OBJECT LITERALS
+// let first = "Aadil"
+// let last = "Rana"
+
+// let person = {
+//     first,
+//     last
+// }
+// object in ES5 was written like this:
+// let person = {
+//     first: first,
+//     second: second
+// }
+// console.log(first)
+// console.log(last)
+
+// function fullName(first,last) {
+//     let name = first + " "+ last;
+//     return {first,last,name}
+// }
+// let p = fullName("Aadil","Rana")
+// console.log(p)
+// console.log(p.name+" "+p.first+" "+p.last);
+
+// function fullName(first,last,age) {
+//     let name = first + " "+ last;
+//     return {
+//         first,
+//         last,
+//         name,
+//         // isSenior: function() {
+//         //     return age > 60;
+//         // }
+//         // This can also be written as 
+//         isSenior() {
+//             return age > 60
+//         }
+//     }
+// }
+// let p = fullName("Aadil","Rana",30)
+// console.log(p)
+// console.log(p.name+" "+p.isSenior());
+
+// we can have white spaces in object literals keys
+// let obj = {
+//     "first name" : "Aadil"
+// }
+// console.log(obj["first name"]);
+
+// we can also variables as property of object
+// let ln  = "last name"
+// let obj = {
+//     "first name" : "Aadil",
+//     [ln] : "Rana"
+// }
+// console.log(obj["first name"],obj["last name"]);
+
+//Destructring of array
+// let emp = ["Aadil","Rana",30];
+// let [fname,lname,age] = emp;
+// console.log(fname,lname,age)
+
+// let emp = ["Aadil","Rana"];
+// let [fname,lname,age] = emp;
+// console.log(fname,lname,age)
+
+// let emp = ["Aadil","Rana",30];
+// let [fname,lname,age=40] = emp;
+// console.log(fname,lname,age)
+
+// let emp = ["Aadil","Rana",40];
+// let [fname,lname,age=30] = emp;
+// console.log(fname,lname,age)
+
+//OBJECT DESTRUCTURING
+// let emp = {
+//     fname: "Aadil",
+//     lname: "Rana",
+//     gender: "Male"
+// }
+// let {fname, lname, gender} = emp;
+// console.log(fname,lname,gender);
+
+// let emp = {
+//     fname: "Aadil",
+//     lname: "Rana",
+//     gender: "Male"
+// }
+// let {fname: f, lname: l, gender: g} = emp; //making alias
+// console.log(f,l,g);
+
+//String Template
+// let obj = "Aadil"
+// let greet = `Welcome to 'Single' and "double" quote ${obj}`
+// let multi = `Welcome to single line 
+//     and next line String 
+// in ES6`
+
+// console.log(greet)
+// console.log(multi)
+
+// for of loop
+//  let colors =  ["Red","Blue","Green"]
+ 
+// //for in loop worked on indexing
+// for (let index in colors) {
+//     console.log(colors[index]);
+// }
+
+// //for of loop take one by one element
+// for (let color of colors) {
+//     console.log(color)
+// }
+
+// let letters = "ABC"
+
+// for (let letter of letters) {
+//     console.log(letter)
+// }
+
+// Classes
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//         console.log("Constructor invoked");
+//     }
+//     static staticMethod() {
+//         console.log("Static Method");
+//     }
+//     greetPerson() {
+//         console.log("Hello" + " "+ this.name);
+//     }
+// }
+// let p = new Person("Aadil");
+// Person.staticMethod();
+// p.greetPerson();
+
+// Classes inheritence
+// class Parent {
+//     constructor(name) {
+//         console.log(name+" Parent Constructor");
+//     }
+// }
+// class Child extends Parent {
+//     constructor(name) {
+//         super(name);
+//         console.log(name + " Child Constructor");
+//     }
+// }
+// let c = new Child("Aadil");
